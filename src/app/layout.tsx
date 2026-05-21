@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     description:
       'Moroccan in Shenzhen. Building M3allem and Arcbuildr.',
   },
-  other: { 'theme-color': '#0B0A07' },
+  other: { 'theme-color': '#0C0907' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" style={{ backgroundColor: '#0B0A07' }}>
+    <html lang="en" style={{ backgroundColor: '#0C0907' }}>
       <body>{children}</body>
     </html>
   )

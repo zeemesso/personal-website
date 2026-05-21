@@ -1,5 +1,13 @@
 import type { Metadata } from 'next'
+import { Playfair_Display } from 'next/font/google'
 import './globals.css'
+
+export const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['500', '600'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://zyade.co'),
@@ -27,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" style={{ backgroundColor: '#0C0907' }}>
+    <html lang="en" className={playfair.variable} style={{ backgroundColor: '#0C0907' }}>
       <body>{children}</body>
     </html>
   )

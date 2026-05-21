@@ -216,11 +216,12 @@ export default function HomePage() {
 
             <h1
               style={{
-                fontFamily: SERIF,
+                fontFamily: 'var(--font-playfair), ui-serif, "New York", Georgia, serif',
                 fontSize: 48,
-                fontWeight: 400,
+                fontWeight: 600,
                 lineHeight: 1.1,
-                color: '#FFFFFF',
+                letterSpacing: '-0.02em',
+                color: '#FAF6F0',
                 marginBottom: 12,
               }}
             >

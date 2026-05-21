@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #111111;
+  --accent-gold: #C8952E;
+  --accent-red: #E05252;
+  --text-primary: #E8E4DC;
+  --text-secondary: #8A8A8A;
+  --border: #1A1A1A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Hover utilities */
+.hover-gold:hover { color: var(--accent-gold) !important; }
+.hover-opacity:hover { opacity: 0.75; }
+.hover-underline:hover { text-decoration: underline; }
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+.nav-link:hover { color: var(--text-primary); }
+
+.footer-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-link:hover { color: var(--accent-gold); }
+
+.text-link-gold {
+  color: var(--accent-gold);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.text-link-gold:hover { opacity: 0.7; }
+
+.btn-primary {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: var(--accent-gold);
+  color: #0A0A0A;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  border: 2px solid var(--accent-gold);
+}
+.btn-primary:hover { opacity: 0.85; }
+
+.btn-outline {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: transparent;
+  color: var(--accent-gold);
+  border: 2px solid var(--accent-gold);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.btn-outline:hover { opacity: 0.7; }
+
+.btn-large {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 18px 48px;
+  background-color: var(--accent-gold);
+  color: #0A0A0A;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.btn-large:hover { opacity: 0.85; }
+
+.module-card {
+  transition: border-color 0.2s;
+}
+.module-card:hover {
+  border-color: rgba(200, 149, 46, 0.3) !important;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+}
+.font-mono-label {
+  font-family: var(--font-jetbrains, 'JetBrains Mono'), monospace;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+  .hero-inner > *:first-child {
+    flex: 1 1 auto !important;
+    max-width: 100% !important;
+  }
+  .hero-inner > *:last-child {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .desktop-nav { display: none !important; }
+  .nav-cta { display: none !important; }
+  .hamburger { display: block !important; }
+  .creator-inner {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+  .creator-inner > *:first-child {
+    flex: none !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* At 390px, constrain oversized headings */
+@media (max-width: 480px) {
+  h1 { letter-spacing: 0.01em !important; }
+  .btn-primary, .btn-outline, .btn-large {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    font-size: 15px !important;
+  }
+}
+
+/* ── Marquee animation ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ── Pricing card glow pulse ── */
+@keyframes pricingGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 0   1px rgba(200,149,46,0.18),
+      0 0 20px 0   rgba(200,149,46,0.06);
+  }
+  50% {
+    box-shadow:
+      0 0 0   1px rgba(200,149,46,0.45),
+      0 0 40px 0   rgba(200,149,46,0.18);
+  }
+}
+.pricing-glow {
+  animation: pricingGlow 3.5s ease-in-out infinite;
+}
+
+
+/* ── Keyboard focus rings — gold, visible only for keyboard users ── */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Scroll indicator bounce ── */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(6px); opacity: 1; }
+}

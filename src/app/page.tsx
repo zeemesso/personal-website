@@ -68,13 +68,13 @@ function MetaBar() {
 
 function SocialIcons() {
   return (
-    <div style={{ display: 'flex', gap: 4, marginTop: 16 }}>
+    <div style={{ display: 'flex', gap: 4, marginTop: 20 }}>
       <a
         href="https://instagram.com/messaoudizyade"
         className="social-icon"
         aria-label="Instagram"
       >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <rect x="2" y="2" width="20" height="20" rx="5" />
           <circle cx="12" cy="12" r="5" />
           <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
@@ -85,7 +85,7 @@ function SocialIcons() {
         className="social-icon"
         aria-label="X"
       >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M4 4l6.5 8L4 20h2l5.5-6.8L16 20h4l-6.8-8.5L19.5 4h-2l-5.2 6.3L8 4H4z" />
         </svg>
       </a>
@@ -94,7 +94,7 @@ function SocialIcons() {
         className="social-icon"
         aria-label="YouTube"
       >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z" />
           <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
         </svg>
@@ -167,6 +167,7 @@ export default function HomePage() {
                 borderRadius: '50%',
                 overflow: 'hidden',
                 filter: 'grayscale(100%)',
+                border: '1px solid rgba(255,240,210,0.1)',
                 boxShadow:
                   '0 0.6px 0.6px -1.25px rgba(0,0,0,0.18), 0 2.3px 2.3px -2.5px rgba(0,0,0,0.16), 0 10px 10px -3.75px rgba(0,0,0,0.06)',
               }}
@@ -195,9 +196,9 @@ export default function HomePage() {
             <h1
               style={{
                 fontFamily: 'var(--font-playfair), ui-serif, "New York", Georgia, serif',
-                fontSize: 54,
+                fontSize: 64,
                 fontWeight: 600,
-                lineHeight: 1.1,
+                lineHeight: 1.0,
                 letterSpacing: '-0.02em',
                 color: '#FFFFFF',
               }}
@@ -227,7 +228,7 @@ export default function HomePage() {
           {/* Social icons */}
           <div
             className="fade-up fade-up-4"
-            style={{ display: 'flex', justifyContent: 'center', marginBottom: 48 }}
+            style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}
           >
             <SocialIcons />
           </div>
@@ -262,11 +263,12 @@ export default function HomePage() {
                 aspectRatio: '16 / 9',
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr 1fr',
+                gap: 0,
               }}
             >
-              <div style={{ background: '#1C1208' }} />
-              <div style={{ background: '#0A0F1A' }} />
-              <div style={{ background: '#12100D' }} />
+              <div style={{ background: '#1C1208', minHeight: 0 }} />
+              <div style={{ background: '#0A0F1A', minHeight: 0 }} />
+              <div style={{ background: '#12100D', minHeight: 0 }} />
             </div>
             <p
               style={{

@@ -46,7 +46,7 @@ function MetaBar() {
         fontSize: 12,
         letterSpacing: '0.04em',
         textTransform: 'uppercase' as const,
-        color: '#8A7A6A',
+        color: '#A89279',
       }}
     >
       <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -233,7 +233,7 @@ export default function HomePage() {
                 fontFamily: SANS,
                 fontSize: 15,
                 fontWeight: 400,
-                color: '#8A7A6A',
+                color: '#A89279',
                 lineHeight: 1.5,
               }}
             >
@@ -286,7 +286,7 @@ export default function HomePage() {
               fontSize: 11,
               letterSpacing: '0.04em',
               textTransform: 'uppercase' as const,
-              color: '#8A7A6A',
+              color: '#A89279',
               textAlign: 'center',
               marginTop: 12,
             }}
@@ -333,7 +333,7 @@ export default function HomePage() {
                 style={{
                   fontFamily: SANS,
                   fontSize: 14,
-                  color: '#8A7A6A',
+                  color: '#A89279',
                 }}
               >
                 Morocco&apos;s home services infrastructure
@@ -344,8 +344,6 @@ export default function HomePage() {
 
           <a
             href="https://arcbuildr.co"
-            target="_blank"
-            rel="noopener noreferrer"
             className="link-card"
           >
             <div>
@@ -364,7 +362,7 @@ export default function HomePage() {
                 style={{
                   fontFamily: SANS,
                   fontSize: 14,
-                  color: '#8A7A6A',
+                  color: '#A89279',
                 }}
               >
                 Story architecture for knowledge sellers

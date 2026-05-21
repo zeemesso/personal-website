@@ -199,6 +199,12 @@ body {
     padding-right: 16px !important;
   }
   .cards-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .cards-grid {
     grid-template-columns: 1fr !important;
   }
 }

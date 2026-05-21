@@ -187,12 +187,11 @@ export default function HomePage() {
               <h1
                 style={{
                   fontFamily: EDITORIAL,
-                  fontSize: 46,
+                  fontSize: 'clamp(32px, 6vw, 46px)',
                   fontWeight: 400,
                   lineHeight: 1.05,
                   letterSpacing: '-0.02em',
                   color: '#FFFFFF',
-                  whiteSpace: 'nowrap' as const,
                 }}
               >
                 Zyade Messaoudi
@@ -353,10 +352,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* 10. Footer metadata bar — mirrors header */}
-        <div className="fade-up fade-up-8">
-          <MetaBar />
-        </div>
+        {/* Bottom breathing room */}
+        <div style={{ height: 80 }} />
       </div>
     </div>
   )

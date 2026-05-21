@@ -49,11 +49,11 @@ export default function M3allemPage() {
           <h1
             className="fade-up fade-up-1"
             style={{
-              fontFamily: 'var(--font-playfair), ui-serif, "New York", Georgia, serif',
-              fontSize: 54,
-              fontWeight: 600,
-              lineHeight: 1.1,
-              letterSpacing: '-0.02em',
+              fontFamily: "'PPEditorialNew', Georgia, 'Times New Roman', serif",
+              fontSize: 56,
+              fontWeight: 400,
+              lineHeight: 1.05,
+              letterSpacing: '-0.01em',
               color: '#FFFFFF',
               marginBottom: 12,
             }}

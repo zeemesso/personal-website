@@ -12,19 +12,50 @@ html {
 }
 
 body {
-  background-color: #0C0907;
-  color: #F5F0E8;
+  background-color: #0F0B08;
+  color: #F0E8DC;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.5;
   min-height: 100vh;
+  position: relative;
+}
+
+/* ── Full-page dot grid ── */
+.dot-grid {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(#2A1F14 1px, transparent 1px);
+  background-size: 18px 18px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Radial vignette over dots ── */
+.vignette {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 30%, transparent 40%, rgba(15,11,8,0.7) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.vignette::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20%;
+  background: linear-gradient(to bottom, transparent, #0F0B08);
+  pointer-events: none;
 }
 
 /* ── Entry animations ── */
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -39,10 +70,22 @@ body {
 
 .fade-up-0 { animation-delay: 0ms; }
 .fade-up-1 { animation-delay: 80ms; }
-.fade-up-2 { animation-delay: 120ms; }
-.fade-up-3 { animation-delay: 160ms; }
-.fade-up-4 { animation-delay: 200ms; }
-.fade-up-5 { animation-delay: 240ms; }
+.fade-up-2 { animation-delay: 100ms; }
+.fade-up-3 { animation-delay: 120ms; }
+.fade-up-4 { animation-delay: 140ms; }
+.fade-up-5 { animation-delay: 160ms; }
+.fade-up-6 { animation-delay: 180ms; }
+.fade-up-7 { animation-delay: 200ms; }
+
+/* ── Status pill pulse ── */
+@keyframes pillPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.pill-pulse {
+  animation: pillPulse 3s ease-in-out infinite;
+}
 
 /* ── Link cards ── */
 .link-card {
@@ -50,17 +93,52 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 22px 20px;
+  padding: 28px 24px;
   border-radius: 10px;
-  background: rgba(255, 248, 235, 0.03);
-  border: 1px solid rgba(255, 248, 235, 0.07);
+  background: rgba(255, 240, 210, 0.03);
+  border: 1px solid rgba(255, 240, 210, 0.07);
   text-decoration: none;
-  transition: border-color 0.25s, background-color 0.25s;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
 }
 
 .link-card:hover {
-  background: rgba(255, 248, 235, 0.05);
-  border-color: rgba(255, 248, 235, 0.14);
+  background: rgba(255, 240, 210, 0.05);
+  border-color: rgba(255, 240, 210, 0.14);
+}
+
+.link-card .arrow-icon {
+  transition: transform 0.25s ease;
+}
+
+.link-card:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+/* ── M3allem card variant ── */
+.link-card-m3allem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 28px 24px;
+  border-radius: 10px;
+  background: rgba(180, 60, 60, 0.06);
+  border: 1px solid rgba(180, 60, 60, 0.18);
+  text-decoration: none;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.link-card-m3allem:hover {
+  background: rgba(180, 60, 60, 0.09);
+  border-color: rgba(180, 60, 60, 0.28);
+}
+
+.link-card-m3allem .arrow-icon {
+  transition: transform 0.25s ease;
+}
+
+.link-card-m3allem:hover .arrow-icon {
+  transform: translateX(3px);
 }
 
 /* ── Social icon tiles ── */
@@ -68,40 +146,35 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  background: rgba(255, 248, 235, 0.05);
-  color: #A89279;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: rgba(255, 240, 210, 0.05);
+  color: #8C7B6B;
   text-decoration: none;
-  transition: background-color 0.25s;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
 }
 
 .social-icon:hover {
-  background: rgba(255, 248, 235, 0.10);
+  opacity: 1;
+  transform: scale(1.05);
+  background: rgba(255, 240, 210, 0.10);
 }
 
-/* ── Dot grid on hero ── */
-.hero-section {
-  position: relative;
+/* ── Avatar hover ── */
+.avatar-wrap {
+  transition: filter 0.4s ease;
 }
 
-.hero-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(#2A2018 1px, transparent 1px);
-  background-size: 16px 16px;
-  mask-image: radial-gradient(circle at center, white 30%, transparent 75%);
-  -webkit-mask-image: radial-gradient(circle at center, white 30%, transparent 75%);
-  pointer-events: none;
-  z-index: 0;
+.avatar-wrap:hover {
+  filter: grayscale(60%);
 }
 
 /* ── Focus rings ── */
 :focus { outline: none; }
 :focus-visible {
-  outline: 2px solid rgba(255, 248, 235, 0.2);
+  outline: 2px solid rgba(255, 240, 210, 0.2);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -115,5 +188,8 @@ body {
   .main-content {
     padding-left: 16px !important;
     padding-right: 16px !important;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr !important;
   }
 }

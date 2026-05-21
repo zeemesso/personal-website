@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     description:
       'Moroccan in Shenzhen. Building M3allem and Arcbuildr.',
   },
-  other: { 'theme-color': '#0C0907' },
+  other: { 'theme-color': '#0F0B08' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={playfair.variable} style={{ backgroundColor: '#0C0907' }}>
+    <html lang="en" className={playfair.variable} style={{ backgroundColor: '#0F0B08' }}>
       <body>{children}</body>
     </html>
   )

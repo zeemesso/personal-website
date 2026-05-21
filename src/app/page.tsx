@@ -313,7 +313,7 @@ export default function HomePage() {
                 gap: 16,
               }}
             >
-              <a href="https://arcbuildr.co" className="link-card">
+              <a href="https://arcbuildr.co?from=zyade" className="link-card">
                 <div style={{ flex: 1 }}>
                   <div
                     style={{
@@ -339,7 +339,7 @@ export default function HomePage() {
                 <ArrowIcon />
               </a>
 
-              <a href="https://arcbuildr.co" className="link-card">
+              <a href="https://arcbuildr.co?from=zyade" className="link-card">
                 <div style={{ flex: 1 }}>
                   <div
                     style={{

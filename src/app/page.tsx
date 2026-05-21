@@ -269,6 +269,17 @@ export default function HomePage() {
             </p>
           </div>
 
+          {/* Divider */}
+          <div
+            className="fade-up fade-up-6"
+            style={{
+              width: '100%',
+              height: 1,
+              background: 'rgba(255,240,210,0.08)',
+              marginBottom: 32,
+            }}
+          />
+
           {/* 8. Cards */}
           <div
             className="fade-up fade-up-7"

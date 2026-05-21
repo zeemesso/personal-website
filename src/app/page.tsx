@@ -54,7 +54,7 @@ function MetaBar() {
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
           <circle cx="12" cy="10" r="3" />
         </svg>
-        深圳, CHINA
+        SHENZHEN, CHINA
       </span>
       <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -125,12 +125,12 @@ export default function HomePage() {
 
       {/* Content layer */}
       <div style={{ position: 'relative', zIndex: 1 }}>
-        {/* 1. Metadata bar */}
+        {/* 1. Header metadata bar */}
         <div className="fade-up fade-up-0">
           <MetaBar />
         </div>
 
-        {/* Main content — LEFT ALIGNED */}
+        {/* Main content */}
         <div
           className="main-content"
           style={{
@@ -142,72 +142,86 @@ export default function HomePage() {
           {/* 32px gap after meta bar */}
           <div style={{ height: 32 }} />
 
-          {/* 2. Avatar */}
-          <div className="fade-up fade-up-1" style={{ marginBottom: 16 }}>
-            <div
-              className="avatar-wrap"
-              style={{
-                width: 90,
-                height: 90,
-                borderRadius: '50%',
-                overflow: 'hidden',
-                filter: 'grayscale(100%)',
-                border: '1px solid rgba(255,240,210,0.1)',
-                boxShadow:
-                  '0 0.6px 0.6px -1.25px rgba(0,0,0,0.18), 0 2.3px 2.3px -2.5px rgba(0,0,0,0.16), 0 10px 10px -3.75px rgba(0,0,0,0.06)',
-              }}
-            >
-              <Image
-                src="/profile.jpg"
-                alt="Zyade Messaoudi"
-                width={90}
-                height={90}
+          {/* HERO BLOCK — CENTERED */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
+            }}
+          >
+            {/* 2. Avatar */}
+            <div className="fade-up fade-up-1" style={{ marginBottom: 16 }}>
+              <div
+                className="avatar-wrap"
                 style={{
-                  objectFit: 'cover',
-                  objectPosition: 'center top',
                   width: 90,
                   height: 90,
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  filter: 'grayscale(100%)',
+                  border: '1px solid rgba(255,240,210,0.1)',
+                  boxShadow:
+                    '0 0.6px 0.6px -1.25px rgba(0,0,0,0.18), 0 2.3px 2.3px -2.5px rgba(0,0,0,0.16), 0 10px 10px -3.75px rgba(0,0,0,0.06)',
                 }}
-                priority
-              />
+              >
+                <Image
+                  src="/profile.jpg"
+                  alt="Zyade Messaoudi"
+                  width={90}
+                  height={90}
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center top',
+                    width: 90,
+                    height: 90,
+                  }}
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* 3. H1 */}
+            <div className="fade-up fade-up-2" style={{ marginBottom: 8 }}>
+              <h1
+                style={{
+                  fontFamily: EDITORIAL,
+                  fontSize: 64,
+                  fontWeight: 400,
+                  lineHeight: 1.0,
+                  letterSpacing: '-0.03em',
+                  color: '#FFFFFF',
+                  transform: 'scaleY(1.05)',
+                  transformOrigin: 'center bottom',
+                }}
+              >
+                Zyade Messaoudi
+              </h1>
+            </div>
+
+            {/* 4. Subtitle */}
+            <div className="fade-up fade-up-3" style={{ marginBottom: 12 }}>
+              <p
+                style={{
+                  fontFamily: SANS,
+                  fontSize: 16,
+                  fontWeight: 400,
+                  color: '#8C7B6B',
+                  lineHeight: 1.5,
+                }}
+              >
+                Moroccan in Shenzhen · Building M3allem + Arcbuildr
+              </p>
+            </div>
+
+            {/* 5. Social icons */}
+            <div className="fade-up fade-up-4" style={{ marginBottom: 32 }}>
+              <SocialIcons />
             </div>
           </div>
 
-          {/* 3. H1 */}
-          <div className="fade-up fade-up-2" style={{ marginBottom: 8 }}>
-            <h1
-              style={{
-                fontFamily: EDITORIAL,
-                fontSize: 56,
-                fontWeight: 400,
-                lineHeight: 1.05,
-                letterSpacing: '-0.01em',
-                color: '#FFFFFF',
-              }}
-            >
-              Zyade Messaoudi
-            </h1>
-          </div>
-
-          {/* 4. Subtitle */}
-          <div className="fade-up fade-up-3" style={{ marginBottom: 12 }}>
-            <p
-              style={{
-                fontFamily: SANS,
-                fontSize: 16,
-                fontWeight: 400,
-                color: '#8C7B6B',
-                lineHeight: 1.5,
-              }}
-            >
-              Moroccan in Shenzhen · Building M3allem + Arcbuildr
-            </p>
-          </div>
-
-          {/* 5. Social icons */}
-          <div className="fade-up fade-up-4" style={{ marginBottom: 32 }}>
-            <SocialIcons />
-          </div>
+          {/* BELOW HERO — LEFT ALIGNED */}
 
           {/* 6. Triptych */}
           <div className="fade-up fade-up-5" style={{ marginBottom: 32 }}>
@@ -264,7 +278,7 @@ export default function HomePage() {
               display: 'flex',
               flexDirection: 'column',
               gap: 12,
-              marginBottom: 32,
+              marginBottom: 80,
             }}
           >
             {/* Arc Self + Arc Made side by side */}
@@ -338,27 +352,11 @@ export default function HomePage() {
               <ArrowIcon color="#C97070" />
             </a>
           </div>
+        </div>
 
-          {/* 9. Status pill — left aligned */}
-          <div className="fade-up fade-up-8" style={{ marginBottom: 80 }}>
-            <span
-              className="pill-pulse"
-              style={{
-                fontFamily: MONO,
-                fontSize: 11,
-                fontWeight: 500,
-                letterSpacing: '0.06em',
-                textTransform: 'uppercase' as const,
-                color: '#C4A882',
-                border: '1px solid rgba(196,168,130,0.25)',
-                borderRadius: 100,
-                padding: '6px 16px',
-                display: 'inline-block',
-              }}
-            >
-              深圳 · BUILDING
-            </span>
-          </div>
+        {/* 10. Footer metadata bar — mirrors header */}
+        <div className="fade-up fade-up-8">
+          <MetaBar />
         </div>
       </div>
     </div>

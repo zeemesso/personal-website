@@ -43,7 +43,7 @@ function MetaBar() {
         margin: '0 auto',
         width: '100%',
         fontFamily: MONO,
-        fontSize: 12,
+        fontSize: 11,
         letterSpacing: '0.04em',
         textTransform: 'uppercase' as const,
         color: '#8C7B6B',
@@ -71,19 +71,19 @@ function SocialIcons() {
   return (
     <div style={{ display: 'flex', gap: 4 }}>
       <a href="https://instagram.com/messaoudizyade" className="social-icon" aria-label="Instagram">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <rect x="2" y="2" width="20" height="20" rx="5" />
           <circle cx="12" cy="12" r="5" />
           <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
         </svg>
       </a>
       <a href="https://x.com/messaoudizyade" className="social-icon" aria-label="X">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M4 4l6.5 8L4 20h2l5.5-6.8L16 20h4l-6.8-8.5L19.5 4h-2l-5.2 6.3L8 4H4z" />
         </svg>
       </a>
       <a href="#" className="social-icon" aria-label="YouTube">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z" />
           <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
         </svg>
@@ -161,7 +161,7 @@ export default function HomePage() {
                   borderRadius: '50%',
                   overflow: 'hidden',
                   filter: 'grayscale(100%)',
-                  border: '1px solid rgba(255,240,210,0.1)',
+                  border: '1px solid rgba(255,240,210,0.15)',
                   boxShadow:
                     '0 0.6px 0.6px -1.25px rgba(0,0,0,0.18), 0 2.3px 2.3px -2.5px rgba(0,0,0,0.16), 0 10px 10px -3.75px rgba(0,0,0,0.06)',
                 }}
@@ -187,13 +187,12 @@ export default function HomePage() {
               <h1
                 style={{
                   fontFamily: EDITORIAL,
-                  fontSize: 64,
+                  fontSize: 46,
                   fontWeight: 400,
-                  lineHeight: 1.0,
-                  letterSpacing: '-0.03em',
+                  lineHeight: 1.05,
+                  letterSpacing: '-0.02em',
                   color: '#FFFFFF',
-                  transform: 'scaleY(1.05)',
-                  transformOrigin: 'center bottom',
+                  whiteSpace: 'nowrap' as const,
                 }}
               >
                 Zyade Messaoudi
@@ -205,7 +204,7 @@ export default function HomePage() {
               <p
                 style={{
                   fontFamily: SANS,
-                  fontSize: 16,
+                  fontSize: 15,
                   fontWeight: 400,
                   color: '#8C7B6B',
                   lineHeight: 1.5,
@@ -295,7 +294,7 @@ export default function HomePage() {
                   <div
                     style={{
                       fontFamily: SANS,
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: 500,
                       color: '#F0E8DC',
                       marginBottom: 4,
@@ -303,7 +302,7 @@ export default function HomePage() {
                   >
                     Arc Self
                   </div>
-                  <div style={{ fontFamily: SANS, fontSize: 14, color: '#8C7B6B' }}>
+                  <div style={{ fontFamily: SANS, fontSize: 13, color: '#8C7B6B' }}>
                     The DIY story system
                   </div>
                 </div>
@@ -315,7 +314,7 @@ export default function HomePage() {
                   <div
                     style={{
                       fontFamily: SANS,
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: 500,
                       color: '#F0E8DC',
                       marginBottom: 4,
@@ -323,7 +322,7 @@ export default function HomePage() {
                   >
                     Arc Made
                   </div>
-                  <div style={{ fontFamily: SANS, fontSize: 14, color: '#8C7B6B' }}>
+                  <div style={{ fontFamily: SANS, fontSize: 13, color: '#8C7B6B' }}>
                     Done-for-you, 3 spots
                   </div>
                 </div>
@@ -337,7 +336,7 @@ export default function HomePage() {
                 <div
                   style={{
                     fontFamily: SANS,
-                    fontSize: 16,
+                    fontSize: 15,
                     fontWeight: 500,
                     color: '#C97070',
                     marginBottom: 4,
@@ -345,7 +344,7 @@ export default function HomePage() {
                 >
                   M3allem
                 </div>
-                <div style={{ fontFamily: SANS, fontSize: 14, color: '#8C7B6B' }}>
+                <div style={{ fontFamily: SANS, fontSize: 13, color: '#8C7B6B' }}>
                   See what I&apos;m building for Morocco →
                 </div>
               </div>

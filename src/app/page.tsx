@@ -187,7 +187,7 @@ export default function HomePage() {
               <h1
                 style={{
                   fontFamily: EDITORIAL,
-                  fontSize: 'clamp(32px, 6vw, 46px)',
+                  fontSize: 46,
                   fontWeight: 400,
                   lineHeight: 1.05,
                   letterSpacing: '-0.02em',

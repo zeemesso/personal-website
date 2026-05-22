@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'PP Editorial New';
+  src: url('/fonts/PPEditorialNew-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'PPEditorialNew';
   src: url('/fonts/PPEditorialNew-Regular.otf') format('opentype');
   font-weight: 400;

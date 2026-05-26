@@ -1,10 +1,45 @@
+/* ── General Sans ── */
 @font-face {
-  font-family: 'PP Editorial New';
-  src: url('/fonts/PPEditorialNew-Regular.otf') format('opentype');
-  font-weight: 400;
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Variable.woff2') format('woff2-variations');
+  font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── PP Editorial New (H1 only) ── */
 @font-face {
   font-family: 'PPEditorialNew';
   src: url('/fonts/PPEditorialNew-Regular.otf') format('opentype');
@@ -29,7 +64,8 @@ html {
 body {
   background-color: #0F0B08;
   color: #F0E8DC;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
   min-height: 100vh;
@@ -103,58 +139,36 @@ body {
   animation: pillPulse 3s ease-in-out infinite;
 }
 
-/* ── Link cards ── */
+/* ── Link cards (vertical stack) ── */
 .link-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 22px 20px;
-  border-radius: 10px;
-  background: rgba(28, 22, 14, 0.85);
-  border: 1px solid rgba(255, 240, 210, 0.07);
+  padding: 20px 24px;
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid rgba(255, 240, 210, 0.12);
   text-decoration: none;
-  transition: border-color 0.25s ease, background-color 0.25s ease;
+  transition: border-color 0.25s ease;
 }
 
 .link-card:hover {
-  background: rgba(28, 22, 14, 0.92);
-  border-color: rgba(255, 240, 210, 0.14);
+  border-color: rgba(255, 240, 210, 0.25);
 }
 
-.link-card .arrow-icon {
-  transition: transform 0.25s ease;
-}
-
-.link-card:hover .arrow-icon {
-  transform: translateX(3px);
-}
-
-/* ── M3allem card variant ── */
-.link-card-m3allem {
+/* ── M3allem card (non-clickable) ── */
+.link-card-muted {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 22px 20px;
-  border-radius: 10px;
-  background: rgba(60, 18, 18, 0.75);
-  border: 1px solid rgba(180, 60, 60, 0.18);
+  padding: 20px 24px;
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid rgba(255, 240, 210, 0.12);
   text-decoration: none;
-  transition: border-color 0.25s ease, background-color 0.25s ease;
-}
-
-.link-card-m3allem:hover {
-  background: rgba(60, 18, 18, 0.85);
-  border-color: rgba(180, 60, 60, 0.28);
-}
-
-.link-card-m3allem .arrow-icon {
-  transition: transform 0.25s ease;
-}
-
-.link-card-m3allem:hover .arrow-icon {
-  transform: translateX(3px);
+  cursor: default;
 }
 
 /* ── Social icon tiles ── */
@@ -162,20 +176,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  background: rgba(255, 240, 210, 0.05);
+  width: 32px;
+  height: 32px;
+  border-radius: 0;
+  background: rgba(255, 240, 210, 0.06);
+  border: 1px solid rgba(255, 240, 210, 0.10);
   color: #8C7B6B;
   text-decoration: none;
-  opacity: 1;
-  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .social-icon:hover {
-  opacity: 1;
-  transform: scale(1.05);
-  background: rgba(255, 240, 210, 0.10);
+  background: rgba(255, 240, 210, 0.12);
+  border-color: rgba(255, 240, 210, 0.20);
 }
 
 /* ── Avatar hover ── */
@@ -195,6 +208,21 @@ body {
   border-radius: 4px;
 }
 
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0F0B08;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 240, 210, 0.08);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8C7B6B;
+}
+
 /* ── Mobile ── */
 @media (max-width: 640px) {
   .meta-bar {
@@ -204,14 +232,5 @@ body {
   .main-content {
     padding-left: 16px !important;
     padding-right: 16px !important;
-  }
-  .cards-grid {
-    grid-template-columns: 1fr 1fr !important;
-  }
-}
-
-@media (max-width: 400px) {
-  .cards-grid {
-    grid-template-columns: 1fr !important;
   }
 }

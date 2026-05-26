@@ -214,7 +214,7 @@ export default function HomePage() {
                   lineHeight: 1.5,
                 }}
               >
-                Moroccan in Shenzhen · Building M3allem + Arcbuildr
+                Moroccan in Shenzhen · 20 · Building M3allem + Arcbuildr
               </p>
             </div>
 
@@ -268,9 +268,7 @@ export default function HomePage() {
                 color: '#F0E8DC',
               }}
             >
-              Not a content creator. Not a student project. A 20-year-old Moroccan
-              building Morocco&apos;s home services infrastructure from inside
-              China&apos;s manufacturing capital. Documenting every step.
+              I&apos;m client zero. Before I run the Arc system on anyone else, I run it on myself. Everything on this page — the story, the content, the positioning — was built with the same system I sell. That&apos;s the proof.
             </p>
           </div>
 
@@ -318,7 +316,7 @@ export default function HomePage() {
                     Arc Self
                   </div>
                   <div style={{ fontFamily: SANS, fontSize: 13, color: '#8C7B6B' }}>
-                    Learn the story system yourself
+                    The DIY path. Learn it, run it yourself.
                   </div>
                 </div>
                 <ArrowIcon />
@@ -338,7 +336,7 @@ export default function HomePage() {
                     Arc Made
                   </div>
                   <div style={{ fontFamily: SANS, fontSize: 13, color: '#8C7B6B' }}>
-                    Your story, built for you
+                    The DFY path. I run the system on you.
                   </div>
                 </div>
                 <ArrowIcon />
@@ -360,7 +358,7 @@ export default function HomePage() {
                   M3allem
                 </div>
                 <div style={{ fontFamily: SANS, fontSize: 13, color: '#8C7B6B' }}>
-                  See what I&apos;m building for Morocco →
+                  Morocco&apos;s home services infrastructure. Built from Shenzhen.
                 </div>
               </div>
               <ArrowIcon color="#C97070" />

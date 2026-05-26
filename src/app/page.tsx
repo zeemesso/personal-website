@@ -89,9 +89,7 @@ function SocialIcons() {
         </svg>
       </a>
       <a href="https://letters.zyade.co" className="social-icon" aria-label="Substack">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="3" />
-        </svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7H2v2h20V7zm0-4H2v2h20V3zM2 11v10l10-5.5L22 21V11H2z"/></svg>
       </a>
     </div>
   )
@@ -259,25 +257,24 @@ export default function HomePage() {
             }}
           />
 
-          {/* 8. Cards — vertical stack */}
+          {/* 8. Cards — clean row list */}
           <div
             className="fade-up fade-up-7"
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: 12,
               marginBottom: 80,
             }}
           >
             {/* Card 1: The Course */}
-            <a href="https://arcbuildr.co/course" className="link-card">
+            <div className="card-row">
               <div style={{ flex: 1 }}>
                 <div
                   style={{
                     fontFamily: SANS,
-                    fontSize: 18,
+                    fontSize: 22,
                     fontWeight: 800,
-                    color: '#F0E8DC',
+                    color: '#FFFFFF',
                     marginBottom: 4,
                   }}
                 >
@@ -287,61 +284,49 @@ export default function HomePage() {
                   Learn the story system. Run it yourself.
                 </div>
               </div>
-              <span
-                style={{
-                  fontFamily: SANS,
-                  fontSize: 13,
-                  fontWeight: 700,
-                  letterSpacing: '0.04em',
-                  color: '#E8722E',
-                  flexShrink: 0,
-                }}
+              <a
+                href="https://arcbuildr.co/course"
+                className="card-btn"
               >
-                Join &rarr;
-              </span>
-            </a>
+                Join
+              </a>
+            </div>
 
             {/* Card 2: Work With Me */}
-            <a href="https://arcbuildr.co/call" className="link-card">
+            <div className="card-row">
               <div style={{ flex: 1 }}>
                 <div
                   style={{
                     fontFamily: SANS,
-                    fontSize: 18,
+                    fontSize: 22,
                     fontWeight: 800,
-                    color: '#F0E8DC',
+                    color: '#FFFFFF',
                     marginBottom: 4,
                   }}
                 >
                   Work With Me
                 </div>
                 <div style={{ fontFamily: SANS, fontSize: 14, fontWeight: 400, color: '#8C7B6B' }}>
-                  I run the full system on you. Book a call.
+                  I run the full system on you.
                 </div>
               </div>
-              <span
-                style={{
-                  fontFamily: SANS,
-                  fontSize: 13,
-                  fontWeight: 700,
-                  letterSpacing: '0.04em',
-                  color: '#E8722E',
-                  flexShrink: 0,
-                }}
+              <a
+                href="https://arcbuildr.co/call"
+                className="card-btn"
               >
-                Book a call &rarr;
-              </span>
-            </a>
+                Book a call
+              </a>
+            </div>
 
             {/* Card 3: M3allem */}
-            <div className="link-card-muted">
+            <div className="card-row" style={{ borderBottom: 'none' }}>
               <div style={{ flex: 1 }}>
                 <div
                   style={{
                     fontFamily: SANS,
-                    fontSize: 18,
+                    fontSize: 22,
                     fontWeight: 800,
-                    color: '#F0E8DC',
+                    color: '#FFFFFF',
                     marginBottom: 4,
                   }}
                 >
@@ -361,7 +346,7 @@ export default function HomePage() {
                   flexShrink: 0,
                 }}
               >
-                Coming soon
+                Coming 2025
               </span>
             </div>
           </div>

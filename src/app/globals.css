@@ -139,36 +139,33 @@ body {
   animation: pillPulse 3s ease-in-out infinite;
 }
 
-/* ── Link cards (vertical stack) ── */
-.link-card {
+/* ── Card rows (clean list) ── */
+.card-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 24px;
-  border-radius: 0;
+  padding: 20px 0;
   background: transparent;
-  border: 1px solid rgba(255, 240, 210, 0.12);
-  text-decoration: none;
-  transition: border-color 0.25s ease;
+  border-bottom: 1px solid rgba(255, 240, 210, 0.10);
 }
 
-.link-card:hover {
-  border-color: rgba(255, 240, 210, 0.25);
+.card-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #E8722E;
+  color: #FFFFFF;
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
 }
 
-/* ── M3allem card (non-clickable) ── */
-.link-card-muted {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 20px 24px;
-  border-radius: 0;
-  background: transparent;
-  border: 1px solid rgba(255, 240, 210, 0.12);
-  text-decoration: none;
-  cursor: default;
+.card-btn:hover {
+  background: #d4631f;
 }
 
 /* ── Social icon tiles ── */

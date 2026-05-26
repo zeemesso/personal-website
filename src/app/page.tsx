@@ -268,7 +268,7 @@ export default function HomePage() {
                 color: '#F0E8DC',
               }}
             >
-              I&apos;m client zero. Before I run the Arc system on anyone else, I run it on myself. Everything on this page — the story, the content, the positioning — was built with the same system I sell. That&apos;s the proof.
+              I build in public. M3allem is Morocco's home services infrastructure. Arcbuildr is the story system I use to document it. Both are real. Both are early.
             </p>
           </div>
 

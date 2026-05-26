@@ -88,6 +88,11 @@ function SocialIcons() {
           <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
         </svg>
       </a>
+      <a href="https://letters.zyade.co" className="social-icon" aria-label="Substack">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="3" />
+        </svg>
+      </a>
     </div>
   )
 }
@@ -299,7 +304,7 @@ export default function HomePage() {
                 gap: 12,
               }}
             >
-              <a href="https://arcbuildr.co?from=zyade" className="link-card">
+              <a href="https://arcbuildr.co/diy" className="link-card">
                 <div style={{ flex: 1 }}>
                   <div
                     style={{
@@ -313,13 +318,13 @@ export default function HomePage() {
                     Arc Self
                   </div>
                   <div style={{ fontFamily: SANS, fontSize: 13, color: '#8C7B6B' }}>
-                    The DIY story system
+                    Learn the story system yourself
                   </div>
                 </div>
                 <ArrowIcon />
               </a>
 
-              <a href="https://arcbuildr.co?from=zyade" className="link-card">
+              <a href="https://arcbuildr.co/dfy" className="link-card">
                 <div style={{ flex: 1 }}>
                   <div
                     style={{
@@ -333,7 +338,7 @@ export default function HomePage() {
                     Arc Made
                   </div>
                   <div style={{ fontFamily: SANS, fontSize: 13, color: '#8C7B6B' }}>
-                    Done-for-you, 3 spots
+                    Your story, built for you
                   </div>
                 </div>
                 <ArrowIcon />

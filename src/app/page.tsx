@@ -266,7 +266,7 @@ export default function HomePage() {
               marginBottom: 80,
             }}
           >
-            {/* Card 1: The Course */}
+            {/* Card 1: The Blueprint */}
             <div className="card-row">
               <div style={{ flex: 1 }}>
                 <div
@@ -278,14 +278,14 @@ export default function HomePage() {
                     marginBottom: 4,
                   }}
                 >
-                  The Course
+                  The Blueprint
                 </div>
                 <div style={{ fontFamily: SANS, fontSize: 14, fontWeight: 400, color: '#8C7B6B' }}>
                   Learn the story system. Run it yourself.
                 </div>
               </div>
               <a
-                href="https://arcbuildr.co/course"
+                href="https://arcbuildr.co/blueprint"
                 className="card-btn"
               >
                 Join

@@ -220,6 +220,13 @@ body {
   background: #8C7B6B;
 }
 
+/* ── Cards grid responsive ── */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* ── Mobile ── */
 @media (max-width: 640px) {
   .meta-bar {

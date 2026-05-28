@@ -257,93 +257,193 @@ export default function HomePage() {
             }}
           />
 
-          {/* 8. Cards — clean row list */}
+          {/* 8. Cards — 3-column grid */}
           <div
-            className="fade-up fade-up-7"
+            className="fade-up fade-up-7 cards-grid"
             style={{
-              display: 'flex',
-              flexDirection: 'column',
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr 1fr',
+              gap: 16,
               marginBottom: 80,
             }}
           >
             {/* Card 1: The Blueprint */}
-            <div className="card-row">
-              <div style={{ flex: 1 }}>
+            <div
+              style={{
+                background: 'rgba(255,240,210,0.06)',
+                border: '1px solid rgba(255,240,210,0.10)',
+                borderRadius: 12,
+                padding: 24,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                gap: 16,
+              }}
+            >
+              <div>
+                <div
+                  style={{
+                    width: 48,
+                    height: 48,
+                    background: 'rgba(255,240,210,0.10)',
+                    borderRadius: 8,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: 12,
+                  }}
+                >
+                  <span style={{ fontFamily: SANS, fontWeight: 700, fontSize: 18, color: '#FFFFFF' }}>A</span>
+                </div>
                 <div
                   style={{
                     fontFamily: SANS,
-                    fontSize: 22,
+                    fontSize: 18,
                     fontWeight: 800,
                     color: '#FFFFFF',
-                    marginBottom: 4,
+                    marginBottom: 6,
                   }}
                 >
                   The Blueprint
                 </div>
                 <div style={{ fontFamily: SANS, fontSize: 14, fontWeight: 400, color: '#8C7B6B' }}>
-                  Learn the story system. Run it yourself.
+                  Learn to turn your story into content that builds a real brand.
                 </div>
               </div>
               <a
                 href="https://arcbuildr.co/blueprint"
-                className="card-btn"
+                style={{
+                  display: 'block',
+                  marginTop: 8,
+                  padding: '12px 0',
+                  background: '#FFFFFF',
+                  color: '#0F0B08',
+                  fontFamily: SANS,
+                  fontWeight: 700,
+                  fontSize: 13,
+                  textAlign: 'center',
+                  borderRadius: 6,
+                  textDecoration: 'none',
+                  letterSpacing: '0.05em',
+                }}
               >
-                Join
+                LEARN THE BLUEPRINT
               </a>
             </div>
 
             {/* Card 2: Work With Me */}
-            <div className="card-row">
-              <div style={{ flex: 1 }}>
+            <div
+              style={{
+                background: 'rgba(255,240,210,0.06)',
+                border: '1px solid rgba(255,240,210,0.10)',
+                borderRadius: 12,
+                padding: 24,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                gap: 16,
+              }}
+            >
+              <div>
+                <div
+                  style={{
+                    width: 48,
+                    height: 48,
+                    background: 'rgba(255,240,210,0.10)',
+                    borderRadius: 8,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: 12,
+                  }}
+                >
+                  <span style={{ fontFamily: SANS, fontWeight: 700, fontSize: 16, color: '#FFFFFF' }}>1:1</span>
+                </div>
                 <div
                   style={{
                     fontFamily: SANS,
-                    fontSize: 22,
+                    fontSize: 18,
                     fontWeight: 800,
                     color: '#FFFFFF',
-                    marginBottom: 4,
+                    marginBottom: 6,
                   }}
                 >
                   Work With Me
                 </div>
                 <div style={{ fontFamily: SANS, fontSize: 14, fontWeight: 400, color: '#8C7B6B' }}>
-                  I run the full system on you.
+                  I run the full Arcbuildr system on you. A few spots only.
                 </div>
               </div>
               <a
                 href="https://arcbuildr.co/call"
-                className="card-btn"
+                style={{
+                  display: 'block',
+                  marginTop: 8,
+                  padding: '12px 0',
+                  background: '#FFFFFF',
+                  color: '#0F0B08',
+                  fontFamily: SANS,
+                  fontWeight: 700,
+                  fontSize: 13,
+                  textAlign: 'center',
+                  borderRadius: 6,
+                  textDecoration: 'none',
+                  letterSpacing: '0.05em',
+                }}
               >
-                Book a call
+                APPLY FOR A SPOT
               </a>
             </div>
 
             {/* Card 3: M3allem */}
-            <div className="card-row" style={{ borderBottom: 'none' }}>
-              <div style={{ flex: 1 }}>
+            <div
+              style={{
+                background: 'rgba(255,240,210,0.06)',
+                border: '1px solid rgba(255,240,210,0.10)',
+                borderRadius: 12,
+                padding: 24,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                gap: 16,
+              }}
+            >
+              <div>
+                <div
+                  style={{
+                    width: 48,
+                    height: 48,
+                    background: 'rgba(255,240,210,0.10)',
+                    borderRadius: 8,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: 12,
+                  }}
+                >
+                  <span style={{ fontFamily: SANS, fontWeight: 700, fontSize: 18, color: '#FFFFFF' }}>M</span>
+                </div>
                 <div
                   style={{
                     fontFamily: SANS,
-                    fontSize: 22,
+                    fontSize: 18,
                     fontWeight: 800,
                     color: '#FFFFFF',
-                    marginBottom: 4,
+                    marginBottom: 6,
                   }}
                 >
                   M3allem
                 </div>
                 <div style={{ fontFamily: SANS, fontSize: 14, fontWeight: 400, color: '#8C7B6B' }}>
-                  Morocco&apos;s home services infrastructure.
+                  Morocco&apos;s home services infrastructure. Coming soon.
                 </div>
               </div>
               <span
                 style={{
                   fontFamily: SANS,
+                  color: '#8C7B6B',
                   fontSize: 13,
                   fontWeight: 500,
-                  letterSpacing: '0.04em',
-                  color: '#8C7B6B',
-                  flexShrink: 0,
                 }}
               >
                 Coming 2025

@@ -88,7 +88,7 @@ function SocialIcons() {
           <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z" />
         </svg>
       </a>
-      <a href="https://letters.zyade.co" className="social-icon" aria-label="Substack">
+      <a href="https://zyademessaoudi.substack.com/" className="social-icon" aria-label="Substack">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7H2v2h20V7zm0-4H2v2h20V3zM2 11v10l10-5.5L22 21V11H2z"/></svg>
       </a>
     </div>
@@ -446,7 +446,7 @@ export default function HomePage() {
                   fontWeight: 500,
                 }}
               >
-                Coming 2025
+                Coming 2026
               </span>
             </div>
           </div>

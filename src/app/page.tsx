@@ -38,12 +38,10 @@ export default function HomePage() {
       <main className="container">
         {/* 2. Profile */}
         <section className="profile">
-          <img
+          <div
             className="profile-photo fade d-0"
-            src="/profile.jpg"
-            alt="Zyade Messaoudi"
-            width={72}
-            height={72}
+            role="img"
+            aria-label="Zyade Messaoudi"
           />
           <div className="profile-text">
             <h1 className="profile-name fade d-60">Zyade Messaoudi</h1>

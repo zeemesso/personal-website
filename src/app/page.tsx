@@ -198,39 +198,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* BELOW HERO — LEFT ALIGNED */}
-
-          {/* 6. Triptych */}
-          <div className="fade-up fade-up-5" style={{ marginBottom: 32 }}>
-            <div
-              style={{
-                width: '100%',
-                borderRadius: 8,
-                overflow: 'hidden',
-                aspectRatio: '16 / 9',
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr 1fr',
-                gap: 0,
-              }}
-            >
-              <div style={{ background: '#1C1208', minHeight: 0 }} />
-              <div style={{ background: '#0A0F1A', minHeight: 0 }} />
-              <div style={{ background: '#12100D', minHeight: 0 }} />
-            </div>
-            <p
-              style={{
-                fontFamily: MONO,
-                fontSize: 11,
-                letterSpacing: '0.04em',
-                textTransform: 'uppercase' as const,
-                color: '#8C7B6B',
-                marginTop: 8,
-              }}
-            >
-              SHENZHEN · 2026
-            </p>
-          </div>
-
           {/* 7. Bio */}
           <div className="fade-up fade-up-6" style={{ marginBottom: 32 }}>
             <p
@@ -372,7 +339,7 @@ export default function HomePage() {
                     marginBottom: 12,
                   }}
                 >
-                  <img className="card-icon" src="/arcbuildr-symbol.svg" alt="" />
+                  <img className="card-icon" src="/arcbuildr-app-icon.svg" alt="" />
                 </div>
                 <div
                   style={{

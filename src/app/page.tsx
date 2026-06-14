@@ -293,7 +293,7 @@ export default function HomePage() {
                     marginBottom: 12,
                   }}
                 >
-                  <span style={{ fontFamily: SANS, fontWeight: 700, fontSize: 18, color: '#FFFFFF' }}>A</span>
+                  <img className="card-icon" src="/arcbuildr-symbol.svg" alt="" />
                 </div>
                 <div
                   style={{
@@ -372,7 +372,7 @@ export default function HomePage() {
                     marginBottom: 12,
                   }}
                 >
-                  <span style={{ fontFamily: SANS, fontWeight: 700, fontSize: 16, color: '#FFFFFF' }}>1:1</span>
+                  <img className="card-icon" src="/arcbuildr-symbol.svg" alt="" />
                 </div>
                 <div
                   style={{

@@ -130,36 +130,6 @@ export default function HomePage() {
               textAlign: 'center',
             }}
           >
-            {/* 2. Avatar */}
-            <div className="fade-up fade-up-1" style={{ marginBottom: 16 }}>
-              <div
-                className="avatar-wrap"
-                style={{
-                  width: 90,
-                  height: 90,
-                  borderRadius: '50%',
-                  overflow: 'hidden',
-                  filter: 'grayscale(100%)',
-                  border: '1px solid rgba(255,240,210,0.15)',
-                  boxShadow:
-                    '0 0.6px 0.6px -1.25px rgba(0,0,0,0.18), 0 2.3px 2.3px -2.5px rgba(0,0,0,0.16), 0 10px 10px -3.75px rgba(0,0,0,0.06)',
-                }}
-              >
-                <Image
-                  src="/profile.jpg"
-                  alt="Zyade Messaoudi"
-                  width={90}
-                  height={90}
-                  style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center top',
-                    width: 90,
-                    height: 90,
-                  }}
-                  priority
-                />
-              </div>
-            </div>
 
             {/* 3. H1 */}
             <div className="fade-up fade-up-2" style={{ marginBottom: 8 }}>
